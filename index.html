@@ -1,0 +1,354 @@
+<html><head><base href="https://websim-portfolio.example.com/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Axel</title>
+<style>
+:root {
+  --primary-color: #6c5ce7;
+  --secondary-color: #a29bfe;
+  --text-color: #2d3436;
+  --bg-color: #f9f9f9;
+  --accent-color: #fd79a8;
+  --card-bg: #ffffff;
+  --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+nav {
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 20px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+section {
+  padding: 80px 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.settings {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow);
+}
+
+.settings button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Dark theme */
+body.dark-theme {
+  --text-color: #f9f9f9;
+  --bg-color: #2d3436;
+  --card-bg: #34495e;
+  --shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 10px 0;
+  }
+  
+  .settings {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0;
+    transform: none;
+  }
+}
+</style><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"></head><body>
+  <header>
+    <div class="container">
+      <h1 id="name">Axel Leloutre</h1>
+      <p>Étudiant en Informatique | Développeur Web Passionné</p>
+    </div>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section id="about">
+      <div class="container">
+        <h2>À propos de moi</h2>
+        <p id="about-text">Je suis un étudiant passionné en informatique, constamment à la recherche de nouveaux défis et d'opportunités d'apprentissage. Mon objectif est de devenir un développeur full-stack compétent, capable de créer des applications web innovantes et utiles qui auront un impact positif sur le monde.</p>
+      </div>
+    </section>
+    
+    <section id="skills">
+      <div class="container">
+        <h2>Compétences</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>Front-end</h3>
+              <p>HTML5, CSS3, JavaScript, React</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Back-end</h3>
+              <p>Node.js, Express, Python, Java</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Base de données</h3>
+              <p>MySQL, MongoDB, PostgreSQL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Outils</h3>
+              <p>Git, Docker, VS Code, Figma</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="projects">
+      <div class="container">
+        <h2>Projets</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>Portfolio Personnel</h3>
+              <p>Création de ce portfolio en utilisant HTML, CSS et JavaScript, avec un design moderne et responsive.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Application de Gestion de Tâches</h3>
+              <p>Développement d'une application web de gestion de tâches avec React pour le front-end et Node.js pour le back-end.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Jeu de Plateau en Ligne</h3>
+              <p>Implémentation d'un jeu de plateau classique en version multijoueur en ligne, utilisant WebSockets pour la communication en temps réel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="certifications">
+      <div class="container">
+        <h2>Certifications</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>Web Development Bootcamp</h3>
+              <p>Udemy - 2023</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Python for Everybody</h3>
+              <p>Coursera - 2022</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Introduction to Computer Science</h3>
+              <p>edX - 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <div class="settings">
+    <button id="lang-toggle">FR | EN</button>
+    <button id="theme-toggle">☀️ | 🌙</button>
+  </div>
+
+  <script>
+    // Fonction pour changer la langue
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === 'fr' ? 'en' : 'fr';
+      document.documentElement.lang = newLang;
+      
+      const translations = {
+        fr: {
+          name: "Axel Leloutre",
+          subtitle: "Étudiant en Informatique | Développeur Web Passionné",
+          about: "À propos",
+          aboutTitle: "À propos de moi",
+          aboutText: "Je suis un étudiant passionné en informatique, constamment à la recherche de nouveaux défis et d'opportunités d'apprentissage. Mon objectif est de devenir un développeur full-stack compétent, capable de créer des applications web innovantes et utiles qui auront un impact positif sur le monde.",
+          skills: "Compétences",
+          projects: "Projets",
+          certifications: "Certifications",
+          langButton: "FR | EN",
+          themeButton: "☀️ | 🌙"
+        },
+        en: {
+          name: "Axel Leloutre",
+          subtitle: "Computer Science Student | Passionate Web Developer",
+          about: "About",
+          aboutTitle: "About Me",
+          aboutText: "I am a passionate computer science student, constantly seeking new challenges and learning opportunities. My goal is to become a competent full-stack developer, capable of creating innovative and useful web applications that will have a positive impact on the world.",
+          skills: "Skills",
+          projects: "Projects",
+          certifications: "Certifications",
+          langButton: "EN | FR",
+          themeButton: "☀️ | 🌙"
+        }
+      };
+      
+      document.getElementById('name').textContent = translations[newLang].name;
+      document.querySelector('header p').textContent = translations[newLang].subtitle;
+      document.querySelector('nav ul li:nth-child(1) a').textContent = translations[newLang].about;
+      document.querySelector('nav ul li:nth-child(2) a').textContent = translations[newLang].skills;
+      document.querySelector('nav ul li:nth-child(3) a').textContent = translations[newLang].projects;
+      document.querySelector('nav ul li:nth-child(4) a').textContent = translations[newLang].certifications;
+      document.querySelector('#about h2').textContent = translations[newLang].aboutTitle;
+      document.getElementById('about-text').textContent = translations[newLang].aboutText;
+      document.querySelector('#skills h2').textContent = translations[newLang].skills;
+      document.querySelector('#projects h2').textContent = translations[newLang].projects;
+      document.querySelector('#certifications h2').textContent = translations[newLang].certifications;
+      document.getElementById('lang-toggle').textContent = translations[newLang].langButton;
+    }
+
+    // Fonction pour changer le thème
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+      const themeButton = document.getElementById('theme-toggle');
+      themeButton.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+    }
+
+    // Ajout des écouteurs d'événements
+    document.getElementById('lang-toggle').addEventListener('click', toggleLanguage);
+    document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+  </script>
+</body></html>
